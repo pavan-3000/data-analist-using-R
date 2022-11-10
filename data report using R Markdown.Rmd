@@ -1,0 +1,25 @@
+---
+title: "palmerpenguin"
+author: "pavan"
+date: "2022-11-10"
+output: html_document
+---
+## data collection
+
+```{r ggplote for penguins data, warning=FALSE}
+library(tidyverse)
+library(ggplot2)
+library(palmerpenguins)
+data(penguins)
+view(penguins)
+```
+
+## data visalization
+```{r ggplote for penguins data visualization, message=TRUE, warning=FALSE, paged.print=TRUE}
+ggplot(data=penguins)+
+  geom_point(mapping = aes(x=flipper_length_mm,y=body_mass_g,colour=species,shape=species))+
+  labs(title="flipper lenght vs body mass",subtitle = "data collected blw 2007 to 2008")
+  
+```
+
+
