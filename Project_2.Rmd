@@ -1,0 +1,40 @@
+---
+title: "data analysis Project"
+author: "Pavan"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+## Data cleaning library 
+  all packages for cleaning data
+```{r}
+```
+
+
+```{r}
+library("here")
+library("skimr")
+library("janitor")
+library("tidyverse")
+```
+
+
+```{r}
+```
+## import data for analysis
+
+```{r}
+
+Fitness <- read_csv("dailyActivity_merged.csv")
+
+colnames(Fitness)
+skim_without_charts(Fitness)
+view(Fitness)
+glimpse(Fitness)
+head(Fitness)
+clean_names(Fitness)
+```
+
+
+ 
+ 
