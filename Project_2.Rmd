@@ -36,5 +36,16 @@ clean_names(Fitness)
 ```
 
 
+ ## Data visualization
  
+ 
+ 
+```{r warning=FALSE}
+plot<-read.csv("Avacado - Pivot Table 1.csv")
+view(plot)
+
+colnames(plot)
+ggplot(data=plot)+
+  geom_point(mapping = aes(x=year,y=SUM.of.AveragePrice,colour=year,shape=year))
+```
  
